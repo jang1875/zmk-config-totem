@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #define MTGAP 0
 #define QWERTY 1
 #define NAV 2
@@ -12,14 +12,13 @@
 #define NOTHING 5
 
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -44,7 +43,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        mtgap_layer {
+        gibon {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Y    |  P      |  O      |  U      |  J  |   |  K  |  D      |  L      |  C      |  W      | BKSP |
             // | CTRL | gui(I)|  sft(N) |  ctl(E) |  alt(A) |  .  |   |  M  |  alt(H) |  ctl(T) |  sft(S) |  gui(R) |  '   |
@@ -52,10 +51,10 @@
             //                          | bksp    | NUM     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-        &kp Y       &lt NAV P    &lt NUM O    &kp U       &kp J        &kp K      &kp D       &lt NUM L    &lt NAV C    &kp W
-        &ht LGUI I  &ht LSHFT N  &ht LCTRL E  &ht LALT A  &kp DOT      &kp M      &ht LALT H  &ht LCTRL T  &ht LSHFT S  &ht LGUI R
-&kp Z   &kp Q       &kp Z        &kp SEMI     &kp COMMA   &kp SQT      &kp B      &kp F       &kp G        &kp V        &kp X       &kp ESC
-                                    &kp BKSP     &mo NUM     &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
+                      &kp Y       &kp W           &kp E        &kp R             &kp T          &kp Y        &kp U              &kp I        &kp O            &kp P
+                      &ht LGUI A  &ht LEFT_ALT S  &ht LCTRL D  &ht LEFT_SHIFT F  &kp G          &kp H        &ht RIGHT_SHIFT J  &ht LCTRL K  &ht RIGHT_ALT L  &ht COLON SEMICOLON
+&ht LEFT_CONTROL ESC  &kp Z       &kp X           &kp C        &kp V             &kp B          &kp B        &kp N              &kp M        &kp COMMA        &kp PERIOD           &kp SLASH
+                                                  &kp BKSP     &lt 3 BACKSPACE   &lt 2 ENTER    &lt 1 SPACE  &lt 3 KP_ENTER     &kp DEL
             >;
         };
 
@@ -67,10 +66,10 @@
             //                          | GUI     | LWR     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-        &kp Q       &lt NAV W    &lt NUM E    &kp R       &kp T        &kp Y      &kp U       &lt NUM I    &lt NAV O    &kp P
-        &ht LGUI A  &ht LSHFT S  &ht LCTRL D  &ht LALT F  &kp G        &kp H      &ht LALT J  &ht LCTRL K  &ht LSHFT L  &ht LGUI SEMI
-&kp Z   &kp Z       &kp X        &kp C        &kp V       &kp B        &kp N      &kp M       &kp COMMA    &kp DOT      &kp FSLH       &kp ESC
-                                    &kp BKSP     &mo NUM     &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
+       &kp Q       &lt NAV W    &lt NUM E    &kp R       &kp T        &kp Y      &kp U       &lt NUM I    &lt NAV O    &kp P
+       &ht LGUI A  &ht LSHFT S  &ht LCTRL D  &ht LALT F  &kp G        &kp H      &ht LALT J  &ht LCTRL K  &ht LSHFT L  &ht LGUI SEMI
+&kp Z  &kp Z       &kp X        &kp C        &kp V       &kp B        &kp N      &kp M       &kp COMMA    &kp DOT      &kp FSLH       &kp ESC
+                                &kp BKSP     &mo NUM     &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
             >;
         };
 
@@ -82,10 +81,10 @@
             //                    |     |     |     |   |     |        |        |
 
             bindings = <
-        &kp GRAVE  &trans     &kp UP      &trans     &kp LC(W)    &trans  &trans         &kp PG_UP        &kp RALT       &trans
-        &kp TAB    &kp LEFT   &kp DOWN    &kp RIGHT  &trans       &trans  &ht LALT HOME  &ht LCTRL PG_DN  &ht LSHFT END  &trans
-&kp Z   &kp ESC    &to MTGAP  &to QWERTY  &trans     &trans       &trans  &kp LG(LEFT)   &kp LG(UP)       &kp LG(RIGHT)  &kp CAPS  &kp ESC
-                                  &trans      &trans     &trans       &trans  &trans         &trans
+       &kp GRAVE  &trans     &kp UP      &trans     &kp LC(W)    &trans  &trans         &kp PG_UP        &kp RALT       &trans
+       &kp TAB    &kp LEFT   &kp DOWN    &kp RIGHT  &trans       &trans  &ht LALT HOME  &ht LCTRL PG_DN  &ht LSHFT END  &trans
+&kp Z  &kp ESC    &to MTGAP  &to QWERTY  &trans     &trans       &trans  &kp LG(LEFT)   &kp LG(UP)       &kp LG(RIGHT)  &kp CAPS  &kp ESC
+                             &trans      &trans     &trans       &trans  &trans         &trans
             >;
         };
 
@@ -97,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-        &kp PLUS     &kp MINUS     &kp ASTRK     &kp SLASH    &kp PRCNT    &kp BSLH   &kp LPAR     &kp RPAR      &kp LBKT      &kp RBKT
-        &ht LGUI N1  &ht LSHFT N2  &ht LCTRL N3  &ht LALT N4  &kp N5       &kp N6     &ht LALT N7  &ht LCTRL N8  &ht LSHFT N9  &ht LGUI N0
-&kp Z   &kp EXCL     &kp TILDE     &kp SEMI      &kp AMPS     &kp SQT      &kp EQUAL  &kp LT       &kp GT        &kp LBRC      &kp RBRC     &kp ESC
-                                      &trans        &trans       &trans       &trans     &trans       &trans
+       &kp PLUS     &kp MINUS     &kp ASTRK     &kp SLASH    &kp PRCNT    &kp BSLH   &kp LPAR     &kp RPAR      &kp LBKT      &kp RBKT
+       &ht LGUI N1  &ht LSHFT N2  &ht LCTRL N3  &ht LALT N4  &kp N5       &kp N6     &ht LALT N7  &ht LCTRL N8  &ht LSHFT N9  &ht LGUI N0
+&kp Z  &kp EXCL     &kp TILDE     &kp SEMI      &kp AMPS     &kp SQT      &kp EQUAL  &kp LT       &kp GT        &kp LBRC      &kp RBRC     &kp ESC
+                                  &trans        &trans       &trans       &trans     &trans       &trans
             >;
         };
 
@@ -112,10 +111,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &msc SCRL_UP   &trans      &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp F12
-        &bt BT_CLR    &trans        &kp C_VOL_DN  &kp C_VOL_UP  &msc SCRL_DOWN &kp LA(F4)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp F11
-&kp Z   &kp F1        &kp F2        &kp F3        &kp F4        &kp F5         &kp F6      &kp F7          &kp F8          &kp F9           &kp F10  &kp ESC
-                                    &trans        &trans        &trans         &trans      &trans          &trans
+       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &msc SCRL_UP      &trans      &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp F12
+       &bt BT_CLR    &trans        &kp C_VOL_DN  &kp C_VOL_UP  &msc SCRL_DOWN    &kp LA(F4)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp F11
+&kp Z  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6      &kp F7          &kp F8          &kp F9           &kp F10  &kp ESC
+                                   &trans        &trans        &trans            &trans      &trans          &trans
             >;
         };
     };
