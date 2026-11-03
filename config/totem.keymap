@@ -95,10 +95,10 @@
             //                          | GUI     | LWR     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-       &kp F1  &kp F2  &kp F3    &kp F4   &kp F5       &kp Y      &kp U     &kp UP_ARROW  &kp DEL    &kp HOME
-       &kp F6  &kp F7  &kp F8    &kp F9   &kp F10      &kp H      &kt LEFT  &kt DOWN      &kp RIGHT  &kp END
-&kp Z  &kp Z   &kp X   &kp C     &kp V    &kp B        &kp N      &kp M     &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
-                       &kp BKSP  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV   &kp DEL
+       &kp F1  &kp F2  &kp F3    &kp F4   &kp F5       &kp Y      &kp INSERT  &kp UP_ARROW  &kp DEL    &kp HOME
+       &kp F6  &kp F7  &kp F8    &kp F9   &kp F10      &kp H      &kt LEFT    &kt DOWN      &kp RIGHT  &kp END
+&kp Z  &kp Z   &kp X   &kp C     &kp V    &kp B        &kp N      &kp M       &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
+                       &kp BKSP  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
             >;
         };
 
