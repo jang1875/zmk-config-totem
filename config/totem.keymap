@@ -72,6 +72,16 @@
             bindings = <&kp LC(F10)>;
             key-positions = <1 10>;
         };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <11 12>;
+        };
+
+        ctlV {
+            bindings = <&kp LC(V)>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
