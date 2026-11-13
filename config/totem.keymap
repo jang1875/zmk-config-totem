@@ -142,7 +142,7 @@
             bindings = <
               &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp SLASH    &kp PRCNT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
               &ht LGUI N1      &ht LSHFT N2  &ht LCTRL N3  &ht LALT N4  &kp N5       &kp N6     &ht LALT N7    &ht LCTRL N8  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&bt BT_SEL 0  &bt BT_SEL 1     &kp TILDE     &kp SEMI      &kp AMPS     &kp SQT      &kp EQUAL  &kp LT         &kp GT        &kp LBRC              &kp RBRC               &bt BT_SEL 1
+&bt BT_SEL 0  &bt BT_SEL 1     &kp TILDE     &kp SEMI      &kp AMPS     &kp SQT      &kp EQUAL  &kp LT         &kp GT        &kp LBRC              &bt BT_SEL 3           &bt BT_SEL 2
                                              &trans        &trans       &trans       &trans     &trans         &trans
             >;
         };
