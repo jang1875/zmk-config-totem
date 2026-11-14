@@ -43,36 +43,6 @@
     combos {
         compatible = "zmk,combos";
 
-        g1 {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <2 1>;
-        };
-
-        g2 {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <3 2>;
-        };
-
-        wave {
-            bindings = <&kp TILDE>;
-            key-positions = <10 11>;
-        };
-
-        d1 {
-            bindings = <&kp MINUS>;
-            key-positions = <21 22>;
-        };
-
-        d2 {
-            bindings = <&kt COLON>;
-            key-positions = <22 23>;
-        };
-
-        f10 {
-            bindings = <&kp LC(F10)>;
-            key-positions = <1 10>;
-        };
-
         copy {
             bindings = <&kp LC(C)>;
             key-positions = <11 12>;
@@ -95,10 +65,10 @@
             //                          | bksp    | NUM     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-               &kp Y       &kp W           &kp E                 &kp R             &kp T            &kp Y        &kp U              &kp I        &kp O            &kp P
-               &ht LGUI A  &ht LEFT_ALT S  &ht LCTRL D           &ht LEFT_SHIFT F  &kp G            &kp H        &ht RIGHT_SHIFT J  &ht LCTRL K  &ht RIGHT_ALT L  &ht COLON SEMICOLON
-&kp BACKSPACE  &kp Z       &kp X           &kp C                 &ht LA(F4) V      &ht LC(F10) B    &kp B        &kp N              &kp M        &kp COMMA        &kp PERIOD           &kp SLASH
-                                           &kp LA(C_MEDIA_TAPE)  &lt 3 ENTER       &lt 2 ENTER      &lt 3 SPACE  &lt 1 SPACE        &kp DEL
+               &kp Y  &kp W  &kp E        &kp R              &kp T            &kp Y        &kp U        &kp I    &kp O      &kp P
+               &kp A  &kp S  &kp D        &kp F              &kp G            &kp H        &kp J        &kp K    &kp L      &kp RIGHT_ALT
+&kp BACKSPACE  &kp Z  &kp X  &kp C        &ht LA(F4) V       &ht LC(F10) B    &kp B        &kp N        &kp M    &kp COMMA  &kp PERIOD     &kp RIGHT_CONTROL
+                             &kp LA(TAB)  &lt 3 RIGHT_SHIFT  &lt 2 ENTER      &lt 3 SPACE  &lt 1 SPACE  &kp ESC
             >;
         };
 
@@ -110,10 +80,10 @@
             //                          | GUI     | LWR     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-         &kp F1  &kp F2  &kp F3     &kp F4   &kp F5       &kp Y      &kp INSERT  &kp UP_ARROW  &kp DEL    &kp HOME
-         &kp F6  &kp F7  &kp F8     &kp F9   &kp F10      &kp H      &kt LEFT    &kt DOWN      &kp RIGHT  &kp END
-&kp ESC  &kp Z   &kp X   &kp C      &kp V    &kp B        &kp N      &kp M       &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
-                         &kp SPACE  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
+          &kp F1  &kp F2  &kp F3     &kp F4   &kp F5       &kp Y      &kp INSERT  &kp UP_ARROW  &kp DEL    &kp HOME
+          &kp F6  &kp F7  &kp F8     &kp F9   &kp F10      &kp H      &kt LEFT    &kt DOWN      &kp RIGHT  &kp END
+&kp CAPS  &kp Z   &kp X   &kp C      &kp V    &kp B        &kp N      &kp M       &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
+                          &kp SPACE  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
             >;
         };
 
