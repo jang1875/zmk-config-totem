@@ -65,10 +65,10 @@
             //                          | bksp    | NUM     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-               &kp Y  &kp W  &kp E        &kp R              &kp T            &kp Y        &kp U        &kp I    &kp O      &kp P
-               &kp A  &kp S  &kp D        &kp F              &kp G            &kp H        &kp J        &kp K    &kp L      &kp RIGHT_ALT
-&kp BACKSPACE  &kp Z  &kp X  &kp C        &ht LA(F4) V       &ht LC(F10) B    &kp B        &kp N        &kp M    &kp COMMA  &kp PERIOD     &kp RIGHT_CONTROL
-                             &kp LA(TAB)  &lt 3 RIGHT_SHIFT  &lt 2 ENTER      &lt 3 SPACE  &lt 1 SPACE  &kp ESC
+               &kp Q  &kp W  &kp E        &kp R                  &kp T            &kp Y        &kp U        &kp I      &kp O    &kp P
+               &kp A  &kp S  &kp D        &kp F                  &kp G            &kp H        &kp J        &kp K      &kp L    &kp SLASH
+&kp BACKSPACE  &kp Z  &kp X  &kp C        &ht LA(F4) V           &ht LC(F10) B    &kp N        &kp M        &kp COMMA  &kp DOT  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+                             &kp LA(TAB)  &ht RIGHT_SHIFT ENTER  &lt 2 ENTER      &lt 3 SPACE  &lt 1 SPACE  &kp ESC
             >;
         };
 
@@ -80,10 +80,10 @@
             //                          | GUI     | LWR     | SPC |   | ENT | RSE     | ALT     |
 
             bindings = <
-          &kp F1  &kp F2  &kp F3     &kp F4   &kp F5       &kp Y      &kp INSERT  &kp UP_ARROW  &kp DEL    &kp HOME
-          &kp F6  &kp F7  &kp F8     &kp F9   &kp F10      &kp H      &kt LEFT    &kt DOWN      &kp RIGHT  &kp END
-&kp CAPS  &kp Z   &kp X   &kp C      &kp V    &kp B        &kp N      &kp M       &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
-                          &kp SPACE  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV     &kp DEL
+          &kp F1  &kp F2  &kp F3     &kp F4   &kp F5       &kp Y      &kp A           &kp UP_ARROW  &kp DEL    &kp HOME
+          &kp F6  &kp F7  &kp F8     &kp F9   &kp F10      &kp H      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp END
+&kp CAPS  &kp Z   &kp X   &kp C      &kp V    &kp B        &kp N      &kp M           &kp COMMA     &kp DOT    &kp PAGE_DOWN  &kp PAGE_UP
+                          &kp SPACE  &mo NUM  &kp ENTER    &kp SPACE  &mo NAV         &kp DEL
             >;
         };
 
